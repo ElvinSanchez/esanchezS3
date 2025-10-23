@@ -3,12 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="esanchezS3.Views.vUno"
              Title="vUno">
+
+    <!--ESTILOS-->
+    <ContentPage.Resources>
+        <Style
+            x:Key="estiloLabel"
+            TargetType="Label">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="TextColor" Value="Red"/>
+        </Style>
+
+        <Style
+            x:Key="estiloButton"
+            TargetType="Button">
+            <Setter Property="Background" Value="Yellow"/>
+            <Setter Property="TextColor" Value="Blue"/>
+        </Style>
+    </ContentPage.Resources>
+
     <VerticalStackLayout
         Spacing="20"
         Padding="20">
         
         <Label 
             Text="Vista UNO"
+            Style="{StaticResource estiloLabel}"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
             FontSize="20"/>
@@ -26,12 +45,14 @@
 
         <Button
             x:Name="btnAbrir"
+            Style="{StaticResource estiloButton}"
             Text="Abrir Ventana"
             Clicked="btnAbrir_Clicked">            
         </Button>
 
         <Button
             x:Name="btnRegistro"
+            Style="{StaticResource estiloButton}"
             Text="Abrir Ventana de Registro"
             Clicked="btnRegistro_Clicked"></Button>
     </VerticalStackLayout>
